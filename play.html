@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+        <meta charset="UTF-8">
+        <meta name="المؤلف" content="وائل بلال ">
+            <title>kinirutsuke web page</title>
+            
+            <link rel="icon" href="kinirutsukepng.png" type="image/x-icon">
+            <link rel="stylesheet" href="main.css" type="text/css">
+  <title>سؤال مع 4 خيارات</title>
+</head>
+<body>
+    <div id="quiz-container">
+        <h2>السؤال الاول</h2>
+        <p>ما اسم الكونيتشي التي اشرفت في اختبار الشونين</p>
+        
+        <div class="answer-options">
+          <input type="radio" id="answer1" name="answer" value="1">
+          <label for="answer1">انكو</label>
+        </div>
+        
+        <div class="answer-options">
+          <input type="radio" id="answer2" name="answer" value="2">
+          <label for="answer2">كوريناي</label>
+        </div>
+        
+        <div class="answer-options">
+          <input type="radio" id="answer3" name="answer" value="3">
+          <label for="answer3">اسوما</label>
+        </div>
+        
+        <div class="answer-options">
+          <input type="radio" id="answer4" name="answer" value="4">
+          <label for="answer4">اينو</label>
+        </div>
+        
+        <button onclick="checkAnswer()">تحقق من الإجابة</button>
+        
+        <div id="result-message" style="display:none;">
+          <p>لقد أجبت بشكل صحيح!</p>
+        </div>
+      </div>
+      
+      <script>
+        function checkAnswer() {
+          var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+          if (selectedAnswer && selectedAnswer.value === "1") {
+            document.getElementById("result-message").style.display = "block";
+          } else {
+            alert("لم تختر الإجابة الصحيحة. حاول مرة أخرى!");
+          }
+        }
+      </script>
+</body>
+</html>
